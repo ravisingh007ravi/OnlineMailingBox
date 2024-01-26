@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(express.json());
 
+mongoose.set('strictQuery', true);
+
 mongoose
   .connect(
     "mongodb+srv://ravisingh007ravi:RaviSingh786@cluster0.i0abxbi.mongodb.net/",
