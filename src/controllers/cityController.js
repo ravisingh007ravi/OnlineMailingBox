@@ -5,7 +5,7 @@ let getCitywithState = async function(req, res){
      
     try {
         // let Country = req.params.Country
-        let data = await cityModel.find({country_name:req.params.city})    
+        let data = await cityModel.find({state_name:req.params.city})    
         res.status(201).send(data);
     }
     catch (err) { res.status(500).send({ status: false, msg: err.message }); }
