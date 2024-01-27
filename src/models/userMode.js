@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
 
-  city_id: { type: mongoose.Schema.Types.ObjectId, required: true, trim: true, ref: 'city' },
+  country_id: { type: mongoose.Schema.Types.ObjectId, required: true, trim: true, ref: 'databasecountrys' },
+  state_id: { type: mongoose.Schema.Types.ObjectId, required: true, trim: true, ref: 'databasestates' },
+  city_id: { type: mongoose.Schema.Types.ObjectId, required: true, trim: true, ref: 'databasecitys' },
   area_id: { type: mongoose.Schema.Types.ObjectId, required: true, trim: true, ref: 'areas' },
   plan_id: { type: mongoose.Schema.Types.ObjectId, required: true, trim: true, ref: 'Plan' },
   name: { type: String, required: true, trim: true },
